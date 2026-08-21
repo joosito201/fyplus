@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Materias primas | fy+</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #171717;
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eeeeee;
+            background: #ffffff;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #171717;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .menu a {
+            color: #444444;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .menu a:hover {
+            color: #000000;
+        }
+
+        .menu-boton {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 26px;
+            color: #171717;
+            cursor: pointer;
+        }
+
+        .cabecera {
+            text-align: center;
+            padding: 100px 20px 70px;
+            background: #fafafa;
+        }
+
+        .cabecera h1 {
+            margin: 0;
+            font-size: 56px;
+            letter-spacing: -2px;
+        }
+
+        .cabecera p {
+            color: #666666;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .contenido {
+            max-width: 850px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .paso {
+            padding: 35px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .numero {
+            color: #888888;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .paso h2 {
+            margin: 0 0 12px;
+            font-size: 24px;
+        }
+
+        .paso p {
+            margin: 0;
+            color: #666666;
+            line-height: 1.7;
+        }
+
+        .contacto {
+            margin-top: 70px;
+            padding: 60px 30px;
+            text-align: center;
+            background: #171717;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .contacto h2 {
+            margin-top: 0;
+        }
+
+        .contacto p {
+            color: #bbbbbb;
+            line-height: 1.7;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: white;
+            color: #171717;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin: 40px 20px;
+            color: #555555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #111111;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .menu-boton {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                gap: 0;
+                align-items: stretch;
+            }
+
+            .menu.activo {
+                display: flex;
+            }
+
+            .menu a {
+                padding: 16px 25px;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .cabecera {
+                padding: 80px 20px 60px;
+            }
+
+            .cabecera h1 {
+                font-size: 44px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+    <a href="index.html" class="logo">
+        fy+
+    </a>
+
+    <button
+        class="menu-boton"
+        onclick="abrirMenu()"
+        aria-label="Abrir menú">
+
+        ☰
+
+    </button>
+
+    <div class="menu" id="menu">
+
+        <a href="index.html">Inicio</a>
+
+        <a href="fincas.html">Fincas</a>
+
+        <a href="terrenos.html">Terrenos</a>
+
+        <a href="vehiculos.html">Vehículos</a>
+
+        <a href="criptomonedas.html">Criptomonedas</a>
+
+        <a href="materias.html">Materias primas</a>
+
+        <a href="edificacion.html">Edificaciones</a>
+
+        <a href="sobre-nosotros.html">Sobre nosotros</a>
+
+        <a href="contacto.html">Contacto</a>
+
+    </div>
+
+</nav>
+
+
+<section class="cabecera">
+
+    <h1>
+        Materias primas
+    </h1>
+
+    <p>
+        Conoce el proceso para gestionar oportunidades
+        relacionadas con diferentes materias primas.
+    </p>
+
+</section>
+
+
+<main class="contenido">
+
+
+    <div class="paso">
+
+        <div class="numero">
+            01
+        </div>
+
+        <h2>
+            Primer contacto
+        </h2>
+
+        <p>
+            Cuéntanos qué tipo de materia prima estás buscando
+            y qué características necesitas.
+            Trabajamos con diferentes sectores, incluyendo
+            metales, alimentación y metales preciosos.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            02
+        </div>
+
+        <h2>
+            Definimos tus necesidades
+        </h2>
+
+        <p>
+            Conoceremos el producto que buscas, la cantidad,
+            las características necesarias, la ubicación,
+            los plazos y cualquier otro requisito importante
+            para la operación.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            03
+        </div>
+
+        <h2>
+            Búsqueda de oportunidades
+        </h2>
+
+        <p>
+            Buscaremos entre nuestra red de contactos y las
+            oportunidades disponibles aquellas que puedan
+            ajustarse a lo que necesitas.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            04
+        </div>
+
+        <h2>
+            Información del producto
+        </h2>
+
+        <p>
+            Una vez localizada una oportunidad de interés,
+            se recopilará la información disponible sobre
+            el producto, sus características, cantidades,
+            condiciones y disponibilidad.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            05
+        </div>
+
+        <h2>
+            Verificación y documentación
+        </h2>
+
+        <p>
+            Antes de continuar con una operación se revisará
+            la información y documentación disponible,
+            según el tipo de producto y las condiciones
+            acordadas entre las partes.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            06
+        </div>
+
+        <h2>
+            Condiciones de la operación
+        </h2>
+
+        <p>
+            Se estudiarán las condiciones de la operación,
+            incluyendo precio, cantidades, entrega y otros
+            aspectos relevantes para las partes.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            07
+        </div>
+
+        <h2>
+            Negociación
+        </h2>
+
+        <p>
+            Si existe interés, se negociarán las condiciones
+            correspondientes entre las partes hasta alcanzar,
+            cuando sea posible, un acuerdo.
+        </p>
+
+    </div>
+
+
+    <div class="paso">
+
+        <div class="numero">
+            08
+        </div>
+
+        <h2>
+            Formalización
+        </h2>
+
+        <p>
+            Una vez acordadas las condiciones, se procederá
+            con la documentación y los trámites necesarios
+            para formalizar la operación.
+        </p>
+
+    </div>
+
+
+    <div class="contacto">
+
+        <h2>
+            ¿Buscas una materia prima?
+        </h2>
+
+        <p>
+            Cuéntanos qué producto estás buscando,
+            qué cantidad necesitas y qué características
+            debe cumplir.
+        </p>
+
+        <a
+            class="boton"
+            href="contacto.html">
+
+            Contactar
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<a
+    class="volver"
+    href="index.html">
+
+    ← Volver a fy+
+
+</a>
+
+
+<footer>
+
+    © 2026 fy+ · Todos los derechos reservados
+
+</footer>
+
+
+<script>
+
+function abrirMenu() {
+
+    const menu =
+        document.getElementById("menu");
+
+    menu.classList.toggle("activo");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contactar | fy+</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #171717;
+            overflow-x: hidden;
+        }
+
+        /* MENÚ */
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eeeeee;
+            background: #ffffff;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #171717;
+            text-decoration: none;
+        }
+
+        .volver {
+            color: #555555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .volver:hover {
+            color: #000000;
+        }
+
+
+        /* CABECERA */
+
+        .cabecera {
+            text-align: center;
+            padding: 110px 20px 70px;
+            background: #fafafa;
+        }
+
+        .cabecera h1 {
+            margin: 0;
+            font-size: 56px;
+            letter-spacing: -2px;
+        }
+
+        .cabecera p {
+            max-width: 600px;
+            margin: 20px auto 0;
+            color: #666666;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* CONTENIDO */
+
+        .contenido {
+            max-width: 850px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .contacto-principal {
+            text-align: center;
+            padding: 60px 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+        }
+
+        .contacto-principal h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .contacto-principal p {
+            color: #666666;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: auto;
+        }
+
+
+        /* BOTÓN */
+
+        .boton-llamar {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 32px;
+            background: #171717;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .boton-llamar:hover {
+            background: #333333;
+        }
+
+
+        /* INFORMACIÓN */
+
+        .informacion {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .bloque {
+            padding: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+        }
+
+        .bloque h3 {
+            margin-top: 0;
+            font-size: 19px;
+        }
+
+        .bloque p {
+            margin-bottom: 0;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+
+        /* VOLVER */
+
+        .volver-inicio {
+            display: block;
+            text-align: center;
+            margin: 50px 20px;
+            color: #555555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            background: #111111;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #999999;
+            text-decoration: none;
+        }
+
+
+        /* MÓVIL */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .cabecera {
+                padding: 80px 20px 60px;
+            }
+
+            .cabecera h1 {
+                font-size: 44px;
+            }
+
+            .cabecera p {
+                font-size: 16px;
+            }
+
+            .contenido {
+                padding: 60px 20px;
+            }
+
+            .informacion {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- MENÚ SIMPLE -->
+
+<nav>
+
+    <a
+        href="index.html"
+        class="logo">
+
+        fy+
+
+    </a>
+
+    <a
+        href="index.html"
+        class="volver">
+
+        ← Volver
+
+    </a>
+
+</nav>
+
+
+<!-- CABECERA -->
+
+<section class="cabecera">
+
+    <h1>
+        Contactar
+    </h1>
+
+    <p>
+        Si estás interesado en alguna de nuestras
+        oportunidades o quieres realizar una consulta,
+        estaremos encantados de atenderte.
+    </p>
+
+</section>
+
+
+<!-- CONTENIDO -->
+
+<main class="contenido">
+
+
+    <div class="contacto-principal">
+
+        <h2>
+            Hablemos
+        </h2>
+
+        <p>
+            Cuéntanos qué estás buscando y qué necesitas.
+            Te informaremos sobre las opciones disponibles
+            y sobre cómo podemos ayudarte.
+        </p>
+
+
+        <a
+            class="boton-llamar"
+            href="tel:+34662371559">
+
+            Llamar al +34 662 371 559
+
+        </a>
+
+    </div>
+
+
+    <div class="informacion">
+
+
+        <div class="bloque">
+
+            <h3>
+                ¿Qué puedes consultar?
+            </h3>
+
+            <p>
+                Fincas, terrenos, vehículos, criptomonedas,
+                materias primas, edificaciones y otras
+                oportunidades comerciales.
+            </p>
+
+        </div>
+
+
+        <div class="bloque">
+
+            <h3>
+                Primer contacto
+            </h3>
+
+            <p>
+                Explícanos qué estás buscando, las
+                características que necesitas y cualquier
+                información que pueda ayudarnos a encontrar
+                una opción adecuada.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+<a
+    href="index.html"
+    class="volver-inicio">
+
+    ← Volver a fy+
+
+</a>
+
+
+<footer>
+
+    <div>
+        © 2026 fy+ · Todos los derechos reservados
+    </div>
+
+    <br>
+
+    <a href="conoceme.html">
+        Sobre nosotros
+    </a>
+
+</footer>
+
+
+</body>
+
+</html>

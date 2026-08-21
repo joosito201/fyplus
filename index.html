@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>fy+ | Oportunidades y servicios</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #171717;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           MENÚ
+        ========================= */
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eeeeee;
+            background: #ffffff;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #171717;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .menu a {
+            color: #444444;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .menu a:hover {
+            color: #000000;
+        }
+
+        /* BOTÓN CONTACTAR */
+
+        .menu-contacto {
+            border: 1px solid #171717;
+            padding: 9px 16px;
+            border-radius: 6px;
+            color: #171717 !important;
+        }
+
+        .menu-contacto:hover {
+            background: #171717;
+            color: white !important;
+        }
+
+        .menu-boton {
+            display: none;
+            border: none;
+            background: transparent;
+            color: #171717;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           PORTADA
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background: #fafafa;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 64px;
+            line-height: 1.05;
+            letter-spacing: -3px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 25px auto;
+            font-size: 19px;
+            line-height: 1.7;
+            color: #666666;
+        }
+
+        .botones {
+            margin-top: 35px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 14px 25px;
+            margin: 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .principal {
+            background: #171717;
+            color: white;
+        }
+
+        .secundario {
+            border: 1px solid #dddddd;
+            color: #171717;
+            background: white;
+        }
+
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        .servicios {
+            padding: 100px 7%;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 38px;
+            margin: 0 0 15px;
+            letter-spacing: -1px;
+        }
+
+        .titulo-seccion p {
+            color: #777777;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .tarjeta {
+            display: block;
+            padding: 35px;
+            min-height: 180px;
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #171717;
+            transition: 0.2s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-4px);
+            border-color: #bbbbbb;
+        }
+
+        .tarjeta h3 {
+            margin: 0 0 12px;
+            font-size: 21px;
+        }
+
+        .tarjeta p {
+            margin: 0;
+            color: #777777;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+            padding: 100px 20px;
+            text-align: center;
+            background: #171717;
+            color: white;
+        }
+
+        .contacto h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contacto p {
+            color: #bbbbbb;
+            max-width: 550px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .boton-contacto {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: white;
+            color: #171717;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            background: #111111;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #999999;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           MÓVIL
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .menu-boton {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .menu.activo {
+                display: flex;
+            }
+
+            .menu a {
+                padding: 16px 25px;
+                border-bottom: 1px solid #eeeeee;
+                font-size: 14px;
+            }
+
+            .menu-contacto {
+                margin: 12px 20px;
+                text-align: center;
+                border: 1px solid #171717 !important;
+            }
+
+            .hero {
+                min-height: 560px;
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .servicios {
+                padding: 70px 20px;
+            }
+
+            .titulo-seccion h2 {
+                font-size: 32px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .tarjeta {
+                min-height: auto;
+            }
+
+            .contacto {
+                padding: 80px 20px;
+            }
+
+            .contacto h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MENÚ
+========================= -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        fy+
+    </a>
+
+    <button
+        class="menu-boton"
+        onclick="abrirMenu()"
+        aria-label="Abrir menú">
+
+        ☰
+
+    </button>
+
+    <div class="menu" id="menu">
+
+        <a href="index.html">
+            Inicio
+        </a>
+
+        <a href="fincas.html">
+            Fincas
+        </a>
+
+        <a href="terrenos.html">
+            Terrenos
+        </a>
+
+        <a href="vehiculos.html">
+            Vehículos
+        </a>
+
+        <a href="criptomonedas.html">
+            Criptomonedas
+        </a>
+
+        <a href="materias.html">
+            Materias primas
+        </a>
+
+        <a href="edificacion.html">
+            Edificaciones
+        </a>
+
+        <a
+            href="contacto.html"
+            class="menu-contacto">
+
+            Contactar
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+
+            Todo lo que buscas.<br>
+            En un solo lugar.
+
+        </h1>
+
+        <p>
+
+            Fincas, terrenos, vehículos, materias primas,
+            edificaciones y otras oportunidades seleccionadas
+            según tus necesidades.
+
+        </p>
+
+        <div class="botones">
+
+            <a
+                class="boton principal"
+                href="#servicios">
+
+                Explorar
+
+            </a>
+
+            <a
+                class="boton secundario"
+                href="contacto.html">
+
+                Contactar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+
+<section
+    class="servicios"
+    id="servicios">
+
+    <div class="titulo-seccion">
+
+        <h2>
+            Explora nuestras opciones
+        </h2>
+
+        <p>
+            Descubre qué podemos ofrecerte.
+        </p>
+
+    </div>
+
+
+    <div class="tarjetas">
+
+
+        <a
+            href="fincas.html"
+            class="tarjeta">
+
+            <h3>
+                Fincas
+            </h3>
+
+            <p>
+                Propiedades y oportunidades
+                inmobiliarias adaptadas a
+                diferentes necesidades.
+            </p>
+
+        </a>
+
+
+        <a
+            href="terrenos.html"
+            class="tarjeta">
+
+            <h3>
+                Terrenos
+            </h3>
+
+            <p>
+                Terrenos y oportunidades
+                inmobiliarias para diferentes
+                proyectos y necesidades.
+            </p>
+
+        </a>
+
+
+        <a
+            href="vehiculos.html"
+            class="tarjeta">
+
+            <h3>
+                Vehículos
+            </h3>
+
+            <p>
+                Vehículos importados con diferentes
+                opciones disponibles.
+            </p>
+
+        </a>
+
+
+        <a
+            href="criptomonedas.html"
+            class="tarjeta">
+
+            <h3>
+                Criptomonedas
+            </h3>
+
+            <p>
+                Oportunidades y operaciones
+                relacionadas con activos
+                digitales.
+            </p>
+
+        </a>
+
+
+        <a
+            href="materias.html"
+            class="tarjeta">
+
+            <h3>
+                Materias primas
+            </h3>
+
+            <p>
+                Metales, alimentación, metales
+                preciosos y otras materias primas.
+            </p>
+
+        </a>
+
+
+        <a
+            href="edificacion.html"
+            class="tarjeta">
+
+            <h3>
+                Edificaciones
+            </h3>
+
+            <p>
+                Centros comerciales, edificios,
+                garajes y otros inmuebles.
+            </p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section class="contacto">
+
+    <h2>
+        ¿Buscas algo en concreto?
+    </h2>
+
+    <p>
+        Cuéntanos qué estás buscando y nos pondremos
+        en contacto contigo para ofrecerte más información.
+    </p>
+
+    <a
+        class="boton-contacto"
+        href="contacto.html">
+
+        Contactar
+
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div>
+        © 2026 fy+ · Todos los derechos reservados
+    </div>
+
+    <br>
+
+<a href="conoceme.html">
+    Sobre nosotros
+</a>
+
+</footer>
+
+
+<script>
+
+function abrirMenu() {
+
+    const menu =
+        document.getElementById("menu");
+
+    menu.classList.toggle("activo");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

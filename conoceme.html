@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conócenos | fy+</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #171717;
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eeeeee;
+            background: #ffffff;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #171717;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .menu a {
+            color: #444444;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .menu a:hover {
+            color: #000000;
+        }
+
+        .menu-boton {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 26px;
+            color: #171717;
+            cursor: pointer;
+        }
+
+        .cabecera {
+            text-align: center;
+            padding: 100px 20px 70px;
+            background: #fafafa;
+        }
+
+        .cabecera h1 {
+            margin: 0;
+            font-size: 56px;
+            letter-spacing: -2px;
+        }
+
+        .cabecera p {
+            max-width: 650px;
+            margin: 20px auto 0;
+            color: #666666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contenido {
+            max-width: 850px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .bloque {
+            padding: 35px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .numero {
+            color: #888888;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .bloque h2 {
+            margin: 0 0 15px;
+            font-size: 25px;
+        }
+
+        .bloque p {
+            margin: 0;
+            color: #666666;
+            line-height: 1.8;
+        }
+
+        .destacado {
+            margin-top: 70px;
+            padding: 55px 35px;
+            background: #171717;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .destacado h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .destacado p {
+            max-width: 600px;
+            margin: auto;
+            color: #bbbbbb;
+            line-height: 1.7;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: white;
+            color: #171717;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin: 40px 20px;
+            color: #555555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #111111;
+            color: #777777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            .menu-boton {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                gap: 0;
+                align-items: stretch;
+            }
+
+            .menu.activo {
+                display: flex;
+            }
+
+            .menu a {
+                padding: 16px 25px;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .cabecera {
+                padding: 80px 20px 60px;
+            }
+
+            .cabecera h1 {
+                font-size: 44px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+    <a href="index.html" class="logo">
+        fy+
+    </a>
+
+    <button
+        class="menu-boton"
+        onclick="abrirMenu()"
+        aria-label="Abrir menú">
+
+        ☰
+
+    </button>
+
+    <div class="menu" id="menu">
+
+        <a href="index.html">Inicio</a>
+
+        <a href="fincas.html">Fincas</a>
+
+        <a href="terrenos.html">Terrenos</a>
+
+        <a href="vehiculos.html">Vehículos</a>
+
+        <a href="criptomonedas.html">Criptomonedas</a>
+
+        <a href="materias.html">Materias primas</a>
+
+        <a href="edificacion.html">Edificaciones</a>
+
+        <a href="conoceme.html">Conócenos</a>
+
+        <a href="contacto.html">Contacto</a>
+
+    </div>
+
+</nav>
+
+
+<section class="cabecera">
+
+    <h1>
+        Conócenos
+    </h1>
+
+    <p>
+        Una red de contactos y oportunidades
+        desarrollada a lo largo de los años.
+    </p>
+
+</section>
+
+
+<main class="contenido">
+
+
+    <div class="bloque">
+
+        <div class="numero">
+            01
+        </div>
+
+        <h2>
+            ¿Quién es Josema?
+        </h2>
+
+        <p>
+            José Manuel, conocido como Josema, es un comerciante
+            que actualmente desarrolla su actividad en diferentes
+            sectores y trabaja con distintas oportunidades
+            comerciales.
+        </p>
+
+    </div>
+
+
+    <div class="bloque">
+
+        <div class="numero">
+            02
+        </div>
+
+        <h2>
+            ¿A qué se dedica?
+        </h2>
+
+        <p>
+            Actualmente trabaja con oportunidades relacionadas
+            con fincas, terrenos, vehículos importados,
+            criptomonedas, materias primas, edificaciones
+            y diferentes operaciones comerciales.
+        </p>
+
+    </div>
+
+
+    <div class="bloque">
+
+        <div class="numero">
+            03
+        </div>
+
+        <h2>
+            Una amplia red de contactos
+        </h2>
+
+        <p>
+            A lo largo de su trayectoria ha desarrollado una
+            amplia red de contactos en diferentes sectores.
+            Actualmente cuenta con más de 400 contactos
+            relacionados con fincas, terrenos, vehículos
+            y otras oportunidades.
+        </p>
+
+    </div>
+
+
+    <div class="bloque">
+
+        <div class="numero">
+            04
+        </div>
+
+        <h2>
+            ¿Cómo trabajamos?
+        </h2>
+
+        <p>
+            Cada operación puede ser diferente. Primero
+            conocemos lo que busca el cliente, después
+            estudiamos las oportunidades disponibles y,
+            cuando existe una opción adecuada, ponemos
+            a las partes en contacto para continuar con
+            el proceso correspondiente.
+        </p>
+
+    </div>
+
+
+    <div class="destacado">
+
+        <h2>
+            ¿Estás buscando una oportunidad?
+        </h2>
+
+        <p>
+            Cuéntanos qué necesitas y estudiaremos las
+            opciones disponibles dentro de nuestra red
+            de contactos.
+        </p>
+
+        <a
+            class="boton"
+            href="contacto.html">
+
+            Contactar
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<a
+    class="volver"
+    href="index.html">
+
+    ← Volver a fy+
+
+</a>
+
+
+<footer>
+
+    © 2026 fy+ · Todos los derechos reservados
+
+</footer>
+
+
+<script>
+
+function abrirMenu() {
+
+    const menu =
+        document.getElementById("menu");
+
+    menu.classList.toggle("activo");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
